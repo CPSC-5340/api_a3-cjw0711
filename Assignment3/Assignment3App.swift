@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Assignment3App: App {
+    @StateObject var pokemonViewModel = PokemonViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PokemonView()
+                .environmentObject(PokemonViewModel())
         }
     }
 }
